@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visor 3D con Model Viewer</title>
+
+  <!-- Cargar la librería -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f3f3f3;
+      padding: 2em;
+    }
+    model-viewer {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mi Modelo 3D</h1>
+  
+  <!-- Aquí va tu modelo -->
+  <model-viewer
+    src="sahurrr.glb"
+    alt="Modelo 3D"
+    camera-controls
+    auto-rotate
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    shadow-intensity="1">
+  </model-viewer>
+
+  <p>Escanea este código QR para verlo en tu teléfono:</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://tu-pagina.com/modelo3d.html" alt="Código QR" />
+
+</body>
+</html>
